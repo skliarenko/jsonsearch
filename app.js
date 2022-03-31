@@ -25,10 +25,10 @@ const observerEl = (element) => {
   loading.style.display = "none";
 };
 
-const loadData = async () => {
+const loadWines = async () => {
   try {
     const results = await fetch(URL);
-    data = await results.json();
+    return results.json();
   } catch (error) {
     console.error(error);
   }
@@ -37,9 +37,9 @@ const loadData = async () => {
 const getWines = async () => {
   loading.style.display = "flex";
 
-  await loadData();
+  const winesData = await loadWines();
 
-  const dataFilltered = data.filter(({ winery }) =>
+  const dataFilltered = winesData.filter(({ winery }) =>
     winery.toLowerCase().includes(search_term.toLowerCase())
   );
 
