@@ -1,6 +1,6 @@
 # jsonsearch
 
-https://zed-web-m.github.io/jsonsearch/
+https://skliarenko.github.io/jsonsearch/
 
 Vanilla JS.
 
